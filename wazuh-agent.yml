@@ -1,0 +1,28 @@
+# WRCCDC 2021 
+# dfir-jesseee
+#
+# run this below to get agents on Linux machines
+# [jesse@ansible lolwazuh]$ ansible-playbook -i 0_inventory.ini wazuh-agent.yml
+#
+# [blackteam@ansible lolwazuh]$ cat wazuh-agent.yml
+#
+- hosts: lin
+  pre_tasks:
+     - name: remove wazuh agent 
+       apt: name="wazuh-agent" state=absent purge=yes
+  roles:
+    - /etc/ansible/roles/wazuh-ansible/roles/wazuh/ansible-wazuh-agent
+  vars:
+    wazuh_managers:
+      - address: 192.168.220.60
+        port: 1514
+        protocol: tcp
+        api_port: 55000
+        api_proto: 'http'
+        api_user: foo
+    wazuh_agent_authd:
+      registration_address: 192.168.220.60
+      enable: true
+      port: 1515
+      ssl_agent_ca: null
+      ssl_auto_negotiate: 'no'

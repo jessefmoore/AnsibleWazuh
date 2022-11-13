@@ -1,0 +1,14 @@
+# WRCCDC 2021
+# dfir-jesseee
+# 
+# The 192.168.220.60 is the Wazuh Manager Server
+#
+# [blackteam@ansible lolwazuh]$ cat w_agent_cmd.yml 
+---
+ # ansible-playbook w_agent_cmd.yml
+
+ - name: run manual agent registration on all linux hosts
+   hosts: 10.100.101.15
+   tasks:
+     - name: register manually
+       command: /var/ossec/bin/agent-auth -m 192.168.220.60

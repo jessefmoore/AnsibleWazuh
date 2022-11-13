@@ -1,7 +1,9 @@
 # WRCCDC 2021 
 # dfir-jesseee
 #
-
+# Read other things like certain Linux OS needs certain python interpreter thing, see URL:
+# https://documentation.wazuh.com/current/deployment-options/deploying-with-ansible/guide/install-ansible.html?highlight=ansible#playbooks-and-roles
+#
 # This is the default Ansible role that you need to download
 # cd /etc/ansible/roles/
 # sudo git clone --branch 4.3 https://github.com/wazuh/wazuh-ansible.git

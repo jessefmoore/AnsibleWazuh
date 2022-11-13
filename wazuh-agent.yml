@@ -1,6 +1,8 @@
 # WRCCDC 2021 
 # dfir-jesseee
 #
+# # The 192.168.220.60 is the Wazuh Manager Server
+#
 # Read other things like certain Linux OS needs certain python interpreter thing, see URL:
 # https://documentation.wazuh.com/current/deployment-options/deploying-with-ansible/guide/install-ansible.html?highlight=ansible#playbooks-and-roles
 #

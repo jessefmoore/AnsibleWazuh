@@ -1,6 +1,11 @@
 # WRCCDC 2021 
 # dfir-jesseee
 #
+
+# This is the default Ansible role that you need to download
+# cd /etc/ansible/roles/
+# sudo git clone --branch 4.3 https://github.com/wazuh/wazuh-ansible.git
+#
 # run this below to get agents on Linux machines
 # [jesse@ansible lolwazuh]$ ansible-playbook -i 0_inventory.ini wazuh-agent.yml
 #

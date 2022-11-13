@@ -1,6 +1,9 @@
 # WRCCDC 2021
 # Dfir-Jesseee
 #
+# run this to get Windows agents
+# [jesse@ansible lolwazuh]$ ansible-playbook -i 0_inventory.ini 1_invoke-powershell.yml
+#
 #[jesse@ansible lolwazuh]$ cat 1_invoke-powershell.yml 
 ---
 - hosts: windows_servers

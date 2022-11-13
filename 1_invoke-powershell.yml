@@ -1,0 +1,24 @@
+# WRCCDC 2021
+# Dfir-Jesseee
+#
+#[jesse@ansible lolwazuh]$ cat 1_invoke-powershell.yml 
+---
+- hosts: windows_servers
+  tasks:
+  - name: Copy a single file
+    win_copy:
+      src: "{{ playbook_dir }}/files/invoke_win_Wazuh_agent.ps1"
+      dest: C:\Users\Public\invoke_win_Wazuh_agent.ps1
+
+  - name: Set-Location to Public Folder
+    win_shell: |
+        Set-Location C:\Users\Public\
+
+  - name: RUN script to INSTALL WAZUH
+    win_shell: cmd /K Powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -File C:\Users\Public\invoke_win_Wazuh_agent.ps1
+#
+# Debug
+#  - name: run a powershell script
+#    script: C:\Users\Public\invoke_win_Wazuh_agent.ps1
+#    register: out
+#   - debug: var=out

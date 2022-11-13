@@ -1,6 +1,8 @@
 # WRCCDC 2021 
 # dfir-jesseee
 #
+# The 192.168.220.60 is the Wazuh Manager Server
+#
 # this needs to be in the FILE folder
 #
 #
